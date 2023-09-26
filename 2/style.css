@@ -1,0 +1,170 @@
+:root{
+    --primary:#3FAF82;
+    --secondary:#3dab7f;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    margin: 2rem auto;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to top right, var(--secondary),var(--primary));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .line {
+        width: 56px;
+        height: 8px;
+        background-color: #fff;
+        margin-bottom: 12px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #00000063;
+    }
+
+    .one {
+        animation: line-1-rev 0.7s ease-in-out forwards;
+    }
+    
+    .two {
+        animation: line-2-rev 0.7s ease-in-out forwards;
+    }
+    
+    .three {
+        animation: line-3-rev 0.7s ease-in-out forwards;
+    }
+
+    &.active {
+        .one {
+            animation: line-1 0.7s ease-in-out forwards;
+        }
+        
+        .two {
+            animation: line-2 0.7s ease-in-out forwards;
+        }
+        
+        .three {
+            animation: line-3 0.7s ease-in-out forwards;
+        }
+    }
+
+}
+
+/*.one {
+    animation: line-1 0.7s ease-in-out forwards;
+}
+
+.two {
+    animation: line-2 0.7s ease-in-out forwards;
+}
+
+.three {
+    animation: line-3 0.7s ease-in-out forwards;
+}*/
+
+/*.one {
+    animation: line-1-rev 2s ease-in-out forwards;
+}
+
+.two {
+    animation: line-2-rev 2s ease-in-out forwards;
+}
+
+.three {
+    animation: line-3-rev 2s ease-in-out forwards;
+}*/
+
+
+@keyframes line-1 {
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+
+    50%{
+        transform: translateY(20px) rotate(0);
+    }
+
+    100%{
+        transform: translateY(20px) rotate(45deg);
+    }  
+}
+
+@keyframes line-2 {
+    0%{
+        opacity: 100%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    100%{
+        opacity: 0%;
+    }  
+}
+
+@keyframes line-3 {
+    0%{
+        transform: translateY(0) rotate(0);
+    }
+
+    50%{
+        transform: translateY(-20px) rotate(0);
+    }
+
+    100%{
+        transform: translateY(-20px) rotate(-45deg);
+    }  
+}
+
+
+
+@keyframes line-1-rev {
+    0%{
+        transform: translateY(20px) rotate(45deg);
+    }
+    50%{
+        transform: translateY(20px) rotate(0deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes line-2-rev {
+    0%{
+        opacity: 0%;
+    }
+
+    50%{
+        opacity: 50%;
+    }
+
+    100%{
+        opacity: 100%;
+    }  
+}
+
+@keyframes line-3-rev {
+    0%{
+        transform: translateY(-20px) rotate(-45deg);
+    }
+    50%{
+        transform: translateY(-20px) rotate(0deg);
+    }
+    100%{
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+
