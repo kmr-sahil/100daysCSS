@@ -27,6 +27,8 @@
     height: 200px;
     border-radius: 100px;
     position: relative;
+    overflow: hidden;
+    animation: animate-circle 4s forwards infinite;
 }
 
 .sky {
@@ -56,6 +58,7 @@
 	width: 58px;
 	background: #DDDADA;
 	clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+    animation: side-right 4s forwards infinite;
 }
 
 .side-left {
@@ -66,6 +69,7 @@
     width: 116px;
     background: #F4F4F4;
     clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+    animation: side-left 4s forwards infinite;
 }
 
 .shadow {
@@ -77,6 +81,7 @@
     width: 360px;
     background: rgba(0,0,0,0.2);
     clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    animation: shadow 4s forwards infinite;
 }
 
 .ground {
@@ -87,12 +92,27 @@
     background-color: #F0DE75;
 }
 
-@keyframes sun-down {
+@keyframes animate-circle {
     0%{
-        transform: rotate(-50deg);
+        opacity: 0%;
     }
     30%{
-        transform: rotate(0deg);
+        opacity: 100%;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+@keyframes sun-down {
+    0%{
+        transform: rotate(-70deg);
+    }
+    30%{
+        transform: rotate(-40deg);
     }
     70%{
         transform: rotate();
@@ -101,3 +121,59 @@
         transform: rotate(40deg);
     }
 }
+
+@keyframes side-left {
+    0%{
+        background: #F4F4F4;
+    }
+    20%{
+        background: #F4F4F4;
+    }
+    40%{
+        background: #DDDADA;
+    }
+    70%{
+        background: #DDDADA;
+    }
+    100%{
+        background: #F4F4F4;
+    }
+}
+
+@keyframes side-right {
+    0%{
+        background: #DDDADA;
+    }
+    20%{
+        background: #DDDADA;
+    }
+    40%{
+        background: #F4F4F4;
+    }
+    70%{
+        background: #F4F4F4;
+    }
+    100%{
+        background: #DDDADA;
+    }
+}
+
+@keyframes shadow {
+    0%{
+        clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    }
+    30%{
+        clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    }
+    70%{
+        clip-path: polygon(115px 0%, 231px 0%, 20% 100%);
+    }
+    95%{
+        clip-path: polygon(115px 0%, 231px 0%, 20% 100%);
+    }
+    100%{
+        clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    }
+}
+
+
