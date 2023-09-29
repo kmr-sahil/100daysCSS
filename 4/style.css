@@ -1,0 +1,81 @@
+:root{
+    --primary:#e27d7d;
+    --secondary:#E56262;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    margin: 2rem auto;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to top right, var(--secondary),var(--primary));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dot {
+    border-radius: 100px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #00000060;
+}
+
+.one {
+   width: 150px;
+   height: 150px;
+   animation: dot-one 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+.two {
+    width: 100px;
+    height: 100px; 
+    animation: dot-two 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+.three {
+    width: 50px;
+    height: 50px; 
+    animation: dot-three 2s cubic-bezier(.21,.98,.6,.99) infinite alternate;
+}
+
+@keyframes dot-one {
+    0%, 10%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes dot-two {
+    0%, 40%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes dot-three {
+    0%, 70%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
