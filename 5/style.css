@@ -1,0 +1,226 @@
+:root{
+    --primary:#e27d7d;
+    --secondary:#E56262;
+ }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+    margin: 2rem auto;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to top right, var(--secondary),var(--primary));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.block {
+    width: 270px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #F1BA64;
+    padding: 0.8rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff
+}
+
+.text {
+    width: 50%;
+}
+
+.header > h3 {
+    font-size: 1rem;
+    
+}
+
+.header > span {
+    font-size: 0.8rem;
+}
+
+.left {
+    text-align: end;
+}
+
+.info {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.info > span {
+    font-size: 0.6rem;
+}
+
+.dash {
+    width: 10px;
+    height: 2px;
+    margin-left: 5px;
+    margin-right: 2px;
+    border-radius: 5px;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: blue;
+}
+
+.graph {
+    height: 100px;
+    margin: 0.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    background-color: #dfdede;
+    height: 2px;
+    border-radius: 50px;
+    border: none;
+}
+
+.red {
+    position: absolute;
+}
+
+.red > svg > polyline {
+    stroke: #E56262;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.red-dots {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #E56262;
+    z-index: 100;
+    content: "";
+}
+
+.r-1 {left: 6px; top: 40px;}
+.r-2 {left: 46px; top: 9px;}
+.r-3 {left: 88px; top: 19px}
+.r-4 {left: 125px; top: 8px;}
+.r-5 {left: 166px; top: 32px;}
+.r-6 {left: 208px; top: 43px;}
+.r-7 {left: 228px; top: 13px;}
+
+.number-r {
+    margin-top: 8px;
+    transform: translate3d(-50%, 10px, 0);
+    background-color: #E56262;
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 26%, 68% 26%, 51% 0, 34% 27%, 0 27%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.red-dots:hover {
+    .number-r {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.blue {
+    position: absolute;
+    top: 22px;
+}
+
+.blue > svg > polyline {
+    stroke: #4a6fd3;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.blue-dots {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4a6fd3;
+    z-index: 100;
+    content: "";
+}
+
+.b-1 {left: 6px; top: 56px;}
+.b-2 {left: 46px; top: 47px;}
+.b-3 {left: 88px; top: 62px}
+.b-4 {left: 125px; top: 52px;}
+.b-5 {left: 166px; top: 57px;}
+.b-6 {left: 208px; top: 70px;}
+.b-7 {left: 228px; top: 60px;}
+
+.number-b {
+    margin-top: 8px;
+    transform: translate3d(-50%, 10px, 0);
+    background-color: #4a6fd3;
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 26%, 68% 26%, 51% 0, 34% 27%, 0 27%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+}
+
+.blue-dots:hover {
+    .number-b {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.weeks {
+    padding: 0 0.8rem;
+    display: flex;
+    gap: 1.1rem;
+    color: #0000008b;
+}
+
+.weeks > span {
+    font-size: 0.6rem;
+}
