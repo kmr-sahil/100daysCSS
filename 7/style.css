@@ -36,6 +36,16 @@
     justify-content: space-between;
     transition: left 0.3s ease-out;
     left: 0;
+    color: rgba(233, 233, 248, 0.645);
+    box-shadow: 2px 2px 5px #00000064;
+
+}
+
+.menu-container > div {
+    transition: 0.2s ease-out;
+}
+
+.menu-container > div:hover {
     color: rgb(233, 233, 248);
 }
 
@@ -71,6 +81,7 @@
     justify-content: space-between;
     transition: right 0.3s ease-out;
     right: 12%;
+    box-shadow: 2px 2px 5px #00000064;
 }
 
 .header {
