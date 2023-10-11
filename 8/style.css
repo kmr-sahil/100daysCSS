@@ -1,0 +1,33 @@
+:root{
+    --primary:#2f516e;
+    --secondary:#264057;
+ }
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+    overflow: hidden;
+    margin: 2rem auto;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to top right, var(--secondary),var(--primary));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ball {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: gold;
+}
