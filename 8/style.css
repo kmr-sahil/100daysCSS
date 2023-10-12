@@ -22,12 +22,224 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    filter: contrast(25);
 }
 
 .ball {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     border-radius: 50px;
-    background-color: gold;
+    background-color: rgb(255, 89, 0);
+    filter: blur(10px);
+}
+
+.ball::after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 10px;
+    top: 10px;
+    filter: blur(10px);
+}
+
+.ball::before {
+    position: absolute;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgba(255, 230, 0, 0.132);
+
+    backdrop-filter: blur(100px);
+    z-index: 99;
+}
+
+.buble-1{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: 48px 48px;
+    animation: animate 7.1s ease-in-out 20s alternate-reverse infinite;
+}
+
+.buble-1::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: -40px -40px;
+    animation: animate 5.1s ease-in-out 4s alternate infinite;
+}
+
+.buble-2::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-3{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: -60px -60px;
+    animation: animate 6.1s ease-in-out 0.5s infinite;
+}
+
+.buble-3::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-4{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: 90px 90px;
+    animation: animate 4.1s ease-in-out 10s alternate infinite;
+}
+
+.buble-4::after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-5{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: 78px 78px;
+    animation: animate 6.1s ease-in-out 2s alternate infinite;
+}
+
+.buble-5::after {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-6{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: -30px -80px;
+    animation: animate 5.1s ease-in-out 1.6s alternate infinite;
+}
+
+.buble-6::after {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-7{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: 32px 90px;
+    animation: animate 9.1s ease-in-out 7s alternate infinite;
+}
+
+.buble-7::after {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+.buble-8{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: rgb(255, 68, 0);
+    filter: blur(10px);
+    transform-origin: 32px 90px;
+    animation: animate 6.1s ease-in-out 14s alternate infinite;
+}
+
+.buble-8::after {
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    content: " ";
+    border-radius: 50px;
+    background-color: rgb(255, 230, 0);
+    left: 5px;
+    top: 5px;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg) scale(1.2) translate3d(0, 0, 0);
+   }
+    to {
+        transform: rotate(360deg) scale(0) translate3d(0, 0, 0);
+   }
 }
