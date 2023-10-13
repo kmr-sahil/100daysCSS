@@ -111,7 +111,7 @@
     background-color: rgb(255, 68, 0);
     filter: blur(10px);
     transform-origin: -60px -60px;
-    animation: animate 6.1s ease-in-out 0.5s infinite;
+    animation: animate 6.1s ease-in-out 0s alternate-reverse infinite;
 }
 
 .buble-3::after {
@@ -177,7 +177,7 @@
     background-color: rgb(255, 68, 0);
     filter: blur(10px);
     transform-origin: -30px -80px;
-    animation: animate 5.1s ease-in-out 1.6s alternate infinite;
+    animation: animate 5.1s ease-in-out 7s alternate infinite;
 }
 
 .buble-6::after {
@@ -199,7 +199,7 @@
     background-color: rgb(255, 68, 0);
     filter: blur(10px);
     transform-origin: 32px 90px;
-    animation: animate 9.1s ease-in-out 7s alternate infinite;
+    animation: animate 9.1s ease-in-out 16s alternate infinite;
 }
 
 .buble-7::after {
@@ -221,7 +221,7 @@
     background-color: rgb(255, 68, 0);
     filter: blur(10px);
     transform-origin: 32px 90px;
-    animation: animate 6.1s ease-in-out 14s alternate infinite;
+    animation: animate 6.1s ease-in-out 5s alternate infinite;
 }
 
 .buble-8::after {
