@@ -1,0 +1,103 @@
+:root{
+    --primary:#4C4C4C;
+    --secondary:#4C4C4C;
+ }
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+    overflow: hidden;
+    margin: 2rem auto;
+    width: 400px;
+    height: 400px;
+    background-image: linear-gradient(to top right, var(--secondary),var(--primary));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 2px 2px 10px #0000004b;
+}
+
+.clock {
+    width: 250px;
+    height: 250px;
+    background-color: #242424;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 2px 8px #24242463;
+}
+
+.dots {
+    margin: 0 auto;
+    width: 220px;
+    height: 220px;
+    border: dotted 4px #ffffff95;
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots > h5 {
+    font-weight: lighter;
+}
+
+.dots > h1 {
+    font-size: 3rem;
+}
+
+.energy {
+    font-size: 0.9rem;
+}
+
+.fa-heart {
+    color: crimson;
+    animation: heart 1s alternate infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1.2);
+    }
+}
+
+.spinner {
+    position: absolute;
+    width: 235px;
+    height: 235px;
+    border: solid 4px crimson;
+    border-radius: 100%;
+}
+
+@keyframes spinner {
+	from {
+		stroke-dashoffset: 625;
+		transform: rotate(-90deg) scaleY(1);
+	}
+	50% {
+		stroke-dashoffset: 0;
+		transform: rotate(-90deg) scaleY(1);
+	}
+	50.001% {
+		transform: rotate(-90deg) scaleY(-1);
+	}
+	to {
+		stroke-dashoffset: 625;
+		transform: rotate(-90deg) scaleY(-1);
+	}
+}
